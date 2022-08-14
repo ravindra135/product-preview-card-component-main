@@ -12,10 +12,11 @@
 }
 
 body {
-    background-color: hsl(30, 38%, 92%);
+    background-color: hsl(30, 38%, 92%); /* hsl(228, 12%, 48%); */
     display: flex;
     align-items: center;
     min-height: 100vh;
+    margin: 0 2rem;
 }
 
 body p {
@@ -23,7 +24,7 @@ body p {
 }
 
 .main-card {
-    background-color: white;
+    background-color: hsl(0, 0%, 100%);
     margin: 0 auto;
 
     border-radius: 12px;
@@ -45,13 +46,14 @@ img {
     flex-direction: column;
     padding: 12%;
     border-radius: 0 12px 12px 0;
-    gap: 40px;
+    gap: 35px;
 }
 
 .small-heading {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: hsl(228, 12%, 48%);
+    letter-spacing: 1ch;
 }
 
 .main-title {
@@ -66,6 +68,7 @@ img {
     font-weight: 500;
     color: hsl(228, 12%, 48%);
     font-size: 22px;
+    line-height: 1.6;
 }
 
 .card-price {
@@ -88,12 +91,59 @@ img {
 }
 
 .main-btn {
-    color: white;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
     padding: 25px;
     border-radius: 17px;
-    font-size: 24px;
+    font-size: 18px;
     border: none;
     background-color: hsl(158, 36%, 37%);
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.cart-ico {
+    position: relative;
+    top: .125em;
+    font-weight: 700;
+    
+}
+
+.main-btn:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+
+
+/* Mobile Compatibility - 375px */
+/* Keeping the current max used screen size in mind, max width is set to 780px */
+@media(max-width: 780px) {
+
+
+    body {
+        margin: 1rem 2rem;
+    }
+
+    .main-card {
+        grid-template-columns: none;
+        grid-template-rows: 35% 65%;
+        max-width: 640px;
+        max-height: 860px;
+    }
+
+    img {
+        border-radius: 12px 12px 0 0;
+    }
+
+    .content-container {
+        padding: 7%;
+        gap: 25px;
+    }
+
+    .main-title {
+        font-size: 45px;
+    }
 }
