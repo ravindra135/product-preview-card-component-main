@@ -31,6 +31,7 @@ body p {
 
     border-radius: 12px;
     max-width: 980px;
+    height: auto;
     
     display: grid;
     grid-template-columns: 50% 50%;
@@ -148,6 +149,7 @@ img {
         grid-template-rows: 35% 65%;
         max-width: 640px;
         max-height: 860px;
+        height: 100%;
     }
 
     img {
